@@ -6,13 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/edtFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtSurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Surface Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edtFirst"
+        app:layout_constraintStart_toStartOf="@+id/edtFirst"
+        app:layout_constraintTop_toBottomOf="@+id/edtFirst" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Your email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/edtSurface"
+        app:layout_constraintStart_toStartOf="@+id/edtSurface"
+        app:layout_constraintTop_toBottomOf="@+id/edtSurface" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:onClick="button"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <TextView
+        android:id="@+id/txtFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Your name: "
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/txtSurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Your surface name: "
+        app:layout_constraintEnd_toEndOf="@+id/txtFirst"
+        app:layout_constraintStart_toStartOf="@+id/txtFirst"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirst" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Your email: "
+        app:layout_constraintEnd_toEndOf="@+id/txtSurface"
+        app:layout_constraintStart_toStartOf="@+id/txtSurface"
+        app:layout_constraintTop_toBottomOf="@+id/txtSurface" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
